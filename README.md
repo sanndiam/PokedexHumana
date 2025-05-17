@@ -1,0 +1,1 @@
+Esta es una Pokédex de personas reales, creada por alumnos de 5to año de Argentina School. Inspirada en el mundo Pokémon, registra a nuestros compañeros como personajes únicos con rarezas, atributos e intereses. Esta versión beta incluye solo a los miembros del grupo "Lechones", pero la idea es expandirla a todo el curso o incluso al colegio entero
