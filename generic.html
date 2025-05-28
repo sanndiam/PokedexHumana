@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -22,7 +21,7 @@
       box-shadow: 0 0 20px rgba(0,0,0,0.1);
     }
 
-    h1, h2 {
+    h1 {
       text-align: center;
     }
 
@@ -32,12 +31,37 @@
       margin-bottom: 1.5rem;
     }
 
-    img {
-      width: 100%;
+    .carousel {
+      position: relative;
       max-width: 600px;
-      display: block;
       margin: 2rem auto;
+      overflow: hidden;
       border-radius: 10px;
+    }
+
+    .carousel img {
+      width: 100%;
+      display: none;
+    }
+
+    .carousel img.active {
+      display: block;
+    }
+
+    .buttons {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .buttons button {
+      padding: 0.5rem 1rem;
+      margin: 0 0.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 5px;
     }
 
     .volver {
@@ -58,17 +82,46 @@
 <body>
   <div class="container">
     <h1>Acerca de Nosotros</h1>
-    <p>Somos un grupo de estudiantes de 5to año de Argentina School que compartimos una gran amistad dentro y fuera del aula. A lo largo del tiempo, nuestro grupo —al que llamamos con cariño <strong>"Lechones"</strong>— ha creado un lazo que va más allá del colegio, compartiendo anécdotas, risas y proyectos juntos.</p>
-    <p>Este proyecto nace también como una expresión de ese vínculo: algo divertido, único y hecho a nuestra manera. Acá les dejamos algunas fotos, y si, nunca vamos a estar los 10 juntos...</p> <br><br>
-      <a href="https://www.instagram.com/lechones.xli/">Instagram</a>
-    <img src="imageshumans/WhatsApp Image 2025-05-16 at 22.46.36.jpeg" alt="Lechones1">
-    <img src="imageshumans/WhatsApp Image 2025-05-16 at 22.47.19.jpeg" alt="Lechones2">
-    <img src="imageshumans/WhatsApp Image 2025-05-16 at 22.47.48.jpeg" alt="Lechones3">
-    <img src="imageshumans/WhatsApp Image 2025-05-16 at 22.48.11.jpeg" alt="Lechones4">
-    <img src="imageshumans/WhatsApp Image 2025-05-16 at 22.48.39.jpeg" alt="Lechones5">
+    <p>Somos un grupo de estudiantes de 5to año de Argentina School que compartimos una gran amistad dentro y fuera del aula. A lo largo del tiempo, nuestro grupo, al que llamamos con cariño "Lechones", ha creado un lazo que va más allá del colegio, compartiendo anécdotas, risas y proyectos juntos.
+Este proyecto nace también como una expresión de ese vínculo: algo divertido, único y hecho a nuestra manera.</p>
+    
+    <div class="carousel">
+      <img src="imageshumans/WhatsApp Image 2025-05-16 at 22.46.36.jpeg" class="active" alt="Foto 1">
+      <img src="imageshumans/WhatsApp Image 2025-05-16 at 22.47.19.jpeg" alt="Foto 2">
+      <img src="imageshumans/WhatsApp Image 2025-05-16 at 22.47.48.jpeg" alt="Foto 3">
+      <img src="imageshumans/WhatsApp Image 2025-05-16 at 22.48.11.jpeg" alt="Foto 4">
+      <img src="imageshumans/WhatsApp Image 2025-05-16 at 22.48.39.jpeg" alt="Foto 5">
+    </div>
+
+    <div class="buttons">
+      <button onclick="anterior()">← Anterior</button>
+      <button onclick="siguiente()">Siguiente →</button>
+    </div>
+
     <div class="volver">
       <a href="index.html">← Volver al inicio</a>
     </div>
   </div>
+
+  <script>
+    const imagenes = document.querySelectorAll(".carousel img");      // Selecciona todas las imágenes dentro del carrusel
+    let actual = 0;                                                   // Guarda cuál imagen está actualmente activa (empieza en 0, la primera)
+
+    function mostrarImagen(index) {                                   // Función para mostrar una imagen por su índice (posición)
+      imagenes.forEach(img => img.classList.remove("active"));        // Oculta todas las imágenes (quita la clase 'active')
+      imagenes[index].classList.add("active");                        // Muestra la imagen con el índice dado (agrega la clase 'active')
+    }
+
+     // Función para pasar a la siguiente imagen
+    function siguiente() { 
+      actual = (actual + 1) % imagenes.length;                // Incrementa el índice, y vuelve a 0 si llega al final
+      mostrarImagen(actual);                                  // Muestra la nueva imagen
+    }
+    // Función para volver a la imagen anterior
+    function anterior() {
+      actual = (actual - 1 + imagenes.length) % imagenes.length;    // Decrementa el índice, y si baja de 0, va al final
+      mostrarImagen(actual);                                        // Muestra la nueva imagen
+    }
+  </script>
 </body>
 </html>

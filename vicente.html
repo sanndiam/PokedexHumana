@@ -94,7 +94,7 @@
 <body>
   <div class="container">
     <div class="perfil-img">
-      <img src="imageshumans/IMG_7392.jpg" alt="Vicente Scarampi">
+      <img id = foto src="imageshumans/IMG_7392.jpg" alt="Vicente Scarampi">
     </div>
     <div class="perfil-info">
       <h1>Vicente Scarampi</h1>
@@ -107,12 +107,28 @@
       <p><strong>Instagram:</strong> @vichescarampi</p>
       <p><strong>Atributos:</strong> Pádel, Presenta una complexión glútea notablemente amplia , Fanático del sexo tántrico.</p>
       <p><strong>Última Aparición:</strong> La casa de la jermu.</p>
-      <p><strong>Carrera Universitaria:</strong> Negocios Digitales.</p>
+      <p><strong>Carrera Universitaria:</strong> Negocios digitales.</p>
       <p><strong>Canción favorita:</strong> <a href="https://www.youtube.com/watch?v=c1KQgiBDwVQ" target="_blank">MIB - Myke Towers</a></p>
     </section>
+
+    <button onclick="alimentar()">🍔 Alimentar</button>
+    <br>
+    <button onclick="dieta()">🥗 Volver a la dieta</button>
+
     <div class="volver">
       <a href="index.html">← Volver a la Pokédex</a>
     </div>
+
+<script>
+     function alimentar() {
+      document.getElementById("foto").src = "Fotos_Gordo/IMG_7929.PNG";
+      }
+     function dieta() {
+      document.getElementById("foto").src = "imageshumans/IMG_7392.jpg";
+      }
+
+</script>
+
   </div>
 </body>
 </html>

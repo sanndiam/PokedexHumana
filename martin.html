@@ -94,7 +94,7 @@
 <body>
   <div class="container">
     <div class="perfil-img">
-      <img src="imageshumans/IMG_7396.jpg" alt="Martin Fuentes">
+      <img id= foto src="imageshumans/IMG_7396.jpg" alt="Martin Fuentes">
     </div>
     <div class="perfil-info">
       <h1>Martin Fuentes</h1>
@@ -110,9 +110,24 @@
       <p><strong>Carrera Universitaria:</strong> Ingenieria Industrial</p>
       <p><strong>Canción favorita:</strong> <a href="https://www.youtube.com/watch?v=09839DpTctU" target="_blank">Hotel California - Eagles</a></p>
     </section>
+
+    <button onclick="alimentar()">🍔 Alimentar</button>
+    <br>
+    <button onclick="dieta()">🥗 Volver a la dieta</button>
+
     <div class="volver">
       <a href="index.html">← Volver a la Pokédex</a>
     </div>
   </div>
+  <script>
+     function alimentar() {
+      document.getElementById("foto").src = "Fotos_Gordo/IMG_7930.PNG";
+      }
+     function dieta() {
+      document.getElementById("foto").src = "imageshumans/IMG_7396.jpg";
+      }
+
+  </script>
+
 </body>
 </html>

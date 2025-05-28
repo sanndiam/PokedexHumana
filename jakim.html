@@ -94,7 +94,7 @@
 <body>
   <div class="container">
     <div class="perfil-img">
-      <img src="imageshumans/IMG_7387.jpg" alt="Jakim Levingston">
+      <img id= foto src="imageshumans/IMG_7387.jpg" alt="Jakim Levingston">
     </div>
     <div class="perfil-info">
       <h1>Jakim Levingston</h1>
@@ -110,9 +110,25 @@
       <p><strong>Carrera Universitaria:</strong> Ingenieria en Petróleo/Electricidad.</p>
       <p><strong>Canción favorita:</strong> <a href="https://www.youtube.com/watch?v=vbvyNnw8Qjg" target="_blank">Mamma - Queen (xd)</a></p>
     </section>
+
+    <button onclick="alimentar()">🍔 Alimentar</button>
+    <br>
+    <button onclick="dieta()">🥗 Volver a la dieta</button>
+
     <div class="volver">
       <a href="index.html">← Volver a la Pokédex</a>
     </div>
   </div>
+
+  <script>
+     function alimentar() {
+      document.getElementById("foto").src = "Fotos_Gordo/IMG_7922.PNG";
+      }
+     function dieta() {
+      document.getElementById("foto").src = "imageshumans/IMG_7387.jpg";
+      }
+
+  </script>
+
 </body>
 </html>

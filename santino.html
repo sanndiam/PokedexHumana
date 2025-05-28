@@ -96,7 +96,7 @@
 
     <!-- Foto -->
     <div class="perfil-img">
-      <img src="imageshumans/IMG_7390.jpg" alt="Santino Diamanti">
+      <img id= foto src="imageshumans/IMG_7390.jpg" alt="Santino Diamanti">
     </div>
 
     <!-- Nombre y apodo -->
@@ -105,10 +105,10 @@
       <h3>san</h3>
     </div>
 
-    <!-- Línea divisora -->
+
     <hr>
 
-    <!-- Detalles -->
+    
     <section class="detalles">
       <p><strong>Rareza:</strong> ⭐⭐⭐⭐☆</p>
       <p><strong>Edad:</strong> 17 años</p>
@@ -119,11 +119,26 @@
       <p><strong>Canción favorita:</strong> <a href="https://www.youtube.com/watch?v=tTvDLtO3fPs" target="_blank">MVP - Ramma</a></p>
     </section>
 
+    <button onclick="alimentar()">🍔 Alimentar</button>
+    <br>
+    <button onclick="dieta()">🥗 Volver a la dieta</button>
+
     <!-- Volver -->
     <div class="volver">
       <a href="index.html">← Volver a la Pokédex</a>
     </div>
 
   </div>
+
+<script>
+     function alimentar() {
+      document.getElementById("foto").src = "Fotos_Gordo/IMG_7926.PNG";
+      }
+     function dieta() {
+      document.getElementById("foto").src = "imageshumans/IMG_7390.jpg";
+      }
+
+</script>
+
 </body>
 </html>
